@@ -42,6 +42,9 @@ Configuração única no repositório:
 1. No GitHub, abra **Settings → Pages**.
 2. Em **Build and deployment → Source**, escolha **GitHub Actions**.
 
+> Se o Pages estiver em modo "Deploy from a branch", o site mostra a raiz do repositório
+> (que é a versão de desenvolvimento e não carrega). Mudar para **GitHub Actions** resolve.
+
 ## Estrutura
 
 ```
