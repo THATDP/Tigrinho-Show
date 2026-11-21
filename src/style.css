@@ -1,0 +1,27 @@
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; height: 100%; width: 100%;
+  background: radial-gradient(circle at 50% 30%, #3a0f5c 0%, #14062b 60%, #07020f 100%);
+  overflow: hidden; font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+  user-select: none; -webkit-user-select: none; color: #fff;
+}
+#app { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }
+#app canvas { display: block; outline: none; }
+
+.loader {
+  position: fixed; inset: 0; z-index: 10; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 22px;
+  background: radial-gradient(circle at 50% 40%, #4b0f6e 0%, #14062b 70%);
+  transition: opacity .6s ease, visibility .6s;
+}
+.loader.hide { opacity: 0; visibility: hidden; }
+.loader-title {
+  font-family: "Arial Black", Impact, sans-serif; font-size: clamp(36px, 7vw, 72px);
+  color: #ffd23f; text-shadow: 0 0 18px #ff2e9a, 0 4px 0 #b3006b;
+  animation: pulse 1.2s ease-in-out infinite alternate;
+}
+.loader-title span { color: #3ff3ff; margin-left: 10px; }
+.loader-bar { width: min(420px, 70vw); height: 16px; border-radius: 99px; background: #2a0f40; overflow: hidden; border: 2px solid #ff2e9a; }
+#loader-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #ffd23f, #ff8c1a, #ff2e9a); transition: width .15s linear; }
+#loader-text { opacity: .8; font-size: 15px; }
+@keyframes pulse { from { transform: scale(1); } to { transform: scale(1.05); } }
